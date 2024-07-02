@@ -2,6 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+interface A {
+  x: number;
+}
+
+interface A {
+  y: number;
+}
+
 function App() {
   return (
     <div className="App">
