@@ -1,7 +1,15 @@
+import { useAppSelector } from '@/store';
 import React, { Suspense } from 'react';
+import { shallowEqual } from 'react-redux';
 import { Link, Outlet } from 'react-router-dom';
 
 const Layout = () => {
+  const { count } = useAppSelector(
+    (state) => ({
+      count: state.counter.count
+    }),
+    shallowEqual
+  );
   return (
     <div>
       <nav>
@@ -12,6 +20,7 @@ const Layout = () => {
       </nav>
 
       <hr />
+      <h2>当前计数：{count}</h2>
       <Suspense fallback="">
         <Outlet />
       </Suspense>

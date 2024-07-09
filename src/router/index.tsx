@@ -11,12 +11,8 @@ const NotFound = React.lazy(() => import('@/views/not-found'));
 const Album = React.lazy(() => import('@/views/discover/child-views/album'));
 const Artist = React.lazy(() => import('@/views/discover/child-views/artist'));
 const DJRadio = React.lazy(() => import('@/views/discover/child-views/dj-radio'));
-const Ranking = React.lazy(
-  () => import('@/views/discover/child-views/ranking')
-);
-const Recomment = React.lazy(
-  () => import('@/views/discover/child-views/recommend')
-);
+const Ranking = React.lazy(() => import('@/views/discover/child-views/ranking'));
+const Recomment = React.lazy(() => import('@/views/discover/child-views/recommend'));
 const Songs = React.lazy(() => import('@/views/discover/child-views/songs'));
 
 const routes: RouteObject[] = [
