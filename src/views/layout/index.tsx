@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 const Layout = () => {
@@ -12,8 +12,9 @@ const Layout = () => {
       </nav>
 
       <hr />
-
-      <Outlet />
+      <Suspense fallback="">
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
